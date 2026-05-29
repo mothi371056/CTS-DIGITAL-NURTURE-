@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Event Registration Form</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+        }
+
+        form {
+            width: 400px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border: 2px solid black;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+        }
+
+        output {
+            color: green;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1 align="center">Event Registration Form</h1>
+
+    <form onsubmit="showMessage(); return false;">
+
+        <!-- Name -->
+        <label>Name :</label>
+
+        <input type="text"
+               placeholder="Enter your name"
+               required
+               autofocus>
+
+        <!-- Email -->
+        <label>Email :</label>
+
+        <input type="email"
+               placeholder="Enter your email"
+               required>
+
+        <!-- Date -->
+        <label>Event Date :</label>
+
+        <input type="date"
+               required>
+
+        <!-- Event Type -->
+        <label>Event Type :</label>
+
+        <select required>
+
+            <option value="">Select Event</option>
+
+            <option>Music Show</option>
+
+            <option>Food Festival</option>
+
+            <option>Sports Meet</option>
+
+        </select>
+
+        <!-- Message -->
+        <label>Message :</label>
+
+        <textarea placeholder="Enter your message"></textarea>
+
+        <!-- Submit Button -->
+        <button type="submit">Register</button>
+
+        <br><br>
+
+        <!-- Output Message -->
+        <output id="result"></output>
+
+    </form>
+
+    <script>
+
+        function showMessage() {
+
+            document.getElementById("result").innerHTML =
+                "Registration submitted successfully!";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
